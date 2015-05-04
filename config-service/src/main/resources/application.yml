@@ -1,0 +1,13 @@
+info:
+  component: config-service
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://bitbucket.org/trisberg/cloud-config-repo
+          username: spring-cloud
+          password: ${bitbucket.password}

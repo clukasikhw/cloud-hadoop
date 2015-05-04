@@ -1,0 +1,5 @@
+info:
+  component: api-gateway-service
+server:
+  port: 8080
+

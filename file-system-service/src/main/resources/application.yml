@@ -1,0 +1,5 @@
+info:
+  component: file-system-service
+server:
+  port: 8081
+
