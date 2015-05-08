@@ -29,7 +29,9 @@ class FileSystemClient {
 			System.out.println("ERROR: " + e.getMessage());
 			throw new InstantiationException(e.getMessage());
 		}
-		System.out.println("FOUND: " + instanceInfo);
+		System.out.println("FOUND: " + instanceInfo.getAppName());
+		System.out.println("FOUND: " + instanceInfo.getMetadata().get("cluster"));
+		System.out.println("FOUND: " + instanceInfo.getHostName());
 		String url = instanceInfo.getHomePageUrl() + "/fspath?path=" + path;
 		String results = restTemplate.getForObject(url, String.class);
 		System.out.println("GOT: " + results);

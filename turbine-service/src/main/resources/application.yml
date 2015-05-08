@@ -19,6 +19,8 @@ logging:
     com.netflix.discovery: 'OFF'
 
 turbine:
-  appConfig: api-gateway-service,file-system-service
-  clusterNameExpression: "'default'"
+  aggregator:
+    clusterConfig: TEST
+  appConfig: file-system-service,api-gateway-service
+  clusterNameExpression: metadata[cluster]
 
