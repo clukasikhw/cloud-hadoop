@@ -1,0 +1,24 @@
+info:
+  component: Turbine
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+server:
+  port: 8989
+
+management:
+  port: 8990
+
+logging:
+  level:
+    ROOT: INFO
+    com.netflix.discovery: 'OFF'
+
+turbine:
+  appConfig: api-gateway-service,file-system-service
+  clusterNameExpression: "'default'"
+
